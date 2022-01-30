@@ -7,7 +7,7 @@
     </div>
     <div class="img-link-container">
         <img src="@/assets/imgs/logout.png" class="img small-img">
-        <NuxtLink to="/signup">ログアウト</NuxtLink>
+        <NuxtLink to="/logout">ログアウト</NuxtLink>
     </div>
     <div class="share-container">
       <h2 class="title-share">シェア</h2>
