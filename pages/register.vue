@@ -3,7 +3,7 @@
     <div class="header">
       <img src="@/assets/imgs/logo.png" class="img">
       <div class="header-right">
-        <NuxtLink to="/signup">新規登録</NuxtLink>
+        <NuxtLink to="/register">新規登録</NuxtLink>
         <NuxtLink to="/login">ログイン</NuxtLink>
       </div>
     </div>
@@ -16,7 +16,7 @@
         <input type="email" placeholder="メールアドレス" required v-model="email">
       </div>
       <div class="password">
-        <input type="password" placeholder="パスワード" required v-model="password">
+        <input type="password" placeholder="パスワード(6文字以上)" required v-model="password">
       </div>
       <button class="btn" @click="register">新規登録</button>
     </div>
@@ -43,6 +43,11 @@ export default {
         .auth()
         .createUserWithEmailAndPassword(this.email, this.password)
         .then((data) => {
+          //ユーザー名登録
+          data.user.updateProfile({
+            displayName: this.name
+          }),
+          //
           data.user.sendEmailVerification().then(() => {
             this.$router.replace('/confirm')
           })

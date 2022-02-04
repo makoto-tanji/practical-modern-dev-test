@@ -1,11 +1,15 @@
 <template>
   <div class="container">
-    <Main></Main>
+    <h2 class="title">ホーム</h2>
+    <CommentComponent></CommentComponent>
+    <CommentComponent></CommentComponent>
+    <CommentComponent></CommentComponent>
   </div>
 </template>
 
 <script>
 export default {
+  layout: 'main-layout',
   data() {
     return {
     };

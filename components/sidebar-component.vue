@@ -2,12 +2,22 @@
   <div class="sidebar">
     <img src="@/assets/imgs/logo.png"  alt="logo" class="img">
     <div class="img-link-container">
-      <img src="@/assets/imgs/home.png" class="img small-img">
-      <NuxtLink to="/home">ホーム</NuxtLink>
+      <NuxtLink to="/home">
+        <img src="@/assets/imgs/home.png" class="img small-img">
+        ホーム
+      </NuxtLink>
     </div>
     <div class="img-link-container">
-        <img src="@/assets/imgs/logout.png" class="img small-img">
-        <NuxtLink to="/logout">ログアウト</NuxtLink>
+        <NuxtLink to="/logout">
+          <img src="@/assets/imgs/logout.png" class="img small-img">
+          ログアウト
+        </NuxtLink>
+    </div>
+    <div class="img-link-container">
+      <NuxtLink to="/profile">
+        <img src="@/assets/imgs/profile.png" class="img small-img">
+        登録情報
+      </NuxtLink>
     </div>
     <div class="share-container">
       <h2 class="title-share">シェア</h2>
@@ -34,6 +44,7 @@
   height: auto;
   max-width: 100%;
   max-height: 100%;
+  margin-right: 10px;
   }
   .title-share{
     margin: 30px 0 10px 0;

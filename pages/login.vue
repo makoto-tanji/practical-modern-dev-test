@@ -3,7 +3,7 @@
     <div class="header">
       <img src="@/assets/imgs/logo.png" class="img">
       <div class="header-right">
-        <NuxtLink to="/signup">新規登録</NuxtLink>
+        <NuxtLink to="/register">新規登録</NuxtLink>
         <NuxtLink to="/login">ログイン</NuxtLink>
       </div>
     </div>
@@ -40,7 +40,7 @@ export default {
         .signInWithEmailAndPassword(this.email, this.password)
         .then(() => {
           alert('ログインが完了しました')
-          this.$router.push('/')
+          this.$router.push('/home')
         })
         .catch((error) => {
           switch (error.code) {
